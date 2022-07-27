@@ -1,16 +1,20 @@
-// import { GlobalStyle } from './styles/global'
+import { GlobalStyle } from './styles/global'
+
+import { BrowserRouter } from 'react-router-dom'
+import { ThemeProvider } from 'styled-components'
+import { Router } from './components/Router'
+import { defaultTheme } from './styles/themes/default'
 
 export function App() {
   return (
-    <>
-      <h1>Hello word!</h1>
-      <p>oi</p>
-
-      {/* <GlobalStyle /> */}
-    </>
+    <ThemeProvider theme={defaultTheme}>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+      <GlobalStyle />
+    </ThemeProvider>
   )
 }
 /* 
 font-family: 'Baloo 2', cursive;
-font-family: 'Roboto', sans-serif;
 */
