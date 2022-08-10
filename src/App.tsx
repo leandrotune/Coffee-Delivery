@@ -15,6 +15,3 @@ export function App() {
     </ThemeProvider>
   )
 }
-/* 
-font-family: 'Baloo 2', cursive;
-*/
