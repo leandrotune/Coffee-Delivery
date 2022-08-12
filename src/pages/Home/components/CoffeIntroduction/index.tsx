@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { Coffee, Package, ShoppingCart, Timer } from 'phosphor-react'
-import coffeDelivery from '../../../../assets/coffe-delivery.svg'
+// import coffeDelivery from '../../../../../public/assets/coffe-delivery.svg'
+
 import {
   IntroCoffe,
   CoffeQuality,
@@ -60,7 +61,10 @@ export function CoffeIntroduction() {
           </CoffeQuality>
         </IntroContent>
         <div>
-          <img src={coffeDelivery} alt="copo de café do coffe delivery" />
+          <img
+            src={'/assets/coffe-delivery.svg'}
+            alt="copo de café do coffe delivery"
+          />
         </div>
       </IntroContainer>
     </IntroCoffe>
