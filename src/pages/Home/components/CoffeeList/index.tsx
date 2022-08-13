@@ -1,3 +1,4 @@
+import { api } from '../../../../services/api'
 import { ShoppingCart } from 'phosphor-react'
 import {
   CoffeeCard,
@@ -7,7 +8,7 @@ import {
 } from './styles'
 import { useState, useEffect } from 'react'
 
-interface CoffeeTypeProps {
+interface Coffees {
   id: number
   image: {
     source: string
@@ -24,12 +25,16 @@ interface CoffeeTypeProps {
 }
 
 export function CoffeeList() {
-  const [coffees, setCoffees] = useState<CoffeeTypeProps[]>([])
+  const [coffees, setCoffees] = useState<Coffees[]>([])
 
   useEffect(() => {
-    fetch('http://localhost:3000/coffeesTypes')
-      .then((response) => response.json())
-      .then((data) => setCoffees(data))
+    async function loadCoffees() {
+      const response = await fetch('http://localhost:3000/coffees')
+      const data = await response.json()
+      setCoffees(data)
+    }
+
+    loadCoffees()
   }, [])
 
   return (
@@ -50,7 +55,7 @@ export function CoffeeList() {
                 <span>{coffee.description}</span>
                 <ContainerAddCard>
                   <label>
-                    <span>R$</span> 9,90
+                    <span>R$</span> {coffee.prince}
                   </label>
                   <input type="number" name="amount" />
                   <button type="submit">
