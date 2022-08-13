@@ -29,9 +29,8 @@ export function CoffeeList() {
 
   useEffect(() => {
     async function loadCoffees() {
-      const response = await fetch('http://localhost:3000/coffees')
-      const data = await response.json()
-      setCoffees(data)
+      const response = await api.get('/coffees')
+      setCoffees(response.data)
     }
 
     loadCoffees()
