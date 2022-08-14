@@ -1,9 +1,10 @@
 import { api } from '../../../../services/api'
-import { ShoppingCart } from 'phosphor-react'
+import { Minus, Plus, ShoppingCart } from 'phosphor-react'
 import {
   CoffeeCard,
   CoffeeListContainer,
   ContainerAddCard,
+  Count,
   TypeContainer,
 } from './styles'
 import { useState, useEffect } from 'react'
@@ -56,7 +57,15 @@ export function CoffeeList() {
                   <label>
                     <span>R$</span> {coffee.prince}
                   </label>
-                  <input type="number" name="amount" />
+                  <Count>
+                    <button>
+                      <Minus size={14} weight="bold" color="#8047F8" />
+                    </button>
+                    <input type="text" name="amount" />
+                    <button>
+                      <Plus size={14} weight="bold" color="#8047F8" />
+                    </button>
+                  </Count>
                   <button type="submit">
                     <ShoppingCart size={22} weight="fill" color="#F3F2F2" />
                   </button>
