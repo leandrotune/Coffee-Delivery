@@ -58,10 +58,10 @@ export const FormContainer = styled.form`
 `
 export const BaseInput = styled.input`
   width: 100%;
-  background: transparent;
   height: 2.625rem;
   padding: 0.75rem;
   border-radius: 4px;
+  background: ${(props) => props.theme['base-input']};
   border: 1px solid ${(props) => props.theme['base-button']};
 
   &:active:focus {
@@ -103,8 +103,8 @@ export const FooterContainer = styled.footer`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 40px;
-  gap: 32px;
+  padding: 2.5rem;
+  gap: 2rem;
 
   max-width: 40rem;
   margin-top: 0.75rem;
@@ -116,7 +116,7 @@ export const FooterContainer = styled.footer`
     flex-direction: row;
     align-items: flex-start;
     padding: 0px;
-    gap: 8px;
+    gap: 0.5rem;
 
     h4 {
       font-size: 1rem;
@@ -137,6 +137,7 @@ export const FooterContent = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   padding: 0px;
   gap: 0.75rem;
 

@@ -2,11 +2,13 @@ import {
   Bank,
   CreditCard,
   CurrencyDollar,
-  DotsThreeOutlineVertical,
   MapPinLine,
   Money,
 } from 'phosphor-react'
+import {} from '../../styles'
 import {
+  FooterContainer,
+  FooterContent,
   FormContainer,
   FormInforContent,
   InputInfor,
@@ -14,10 +16,6 @@ import {
   InputInforComplemento,
   InputInforEstado,
   InputInforRoad,
-} from '../styles'
-import {
-  FooterContainer,
-  FooterContent,
   SectionContainer,
   SectionHeaderContainer,
 } from './styles'

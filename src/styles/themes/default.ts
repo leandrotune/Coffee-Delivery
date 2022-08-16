@@ -19,4 +19,4 @@ export const defaultTheme = {
   'purple-800': '#4B2995',
   'purple-400': '#8047F8',
   'purple-100': '#EBE5F9',
-}
+} as const
