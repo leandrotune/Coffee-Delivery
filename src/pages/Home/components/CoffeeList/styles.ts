@@ -103,31 +103,3 @@ export const ContainerAddCard = styled.div`
     background: ${(props) => props.theme['purple-800']};
   } */
 `
-export const Count = styled.div`
-  background: ${(props) => props.theme['base-button']};
-  width: 4.5rem;
-  height: 2.375rem;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-
-  button {
-    width: 100%;
-    height: 100%;
-    border: 0;
-    border-radius: 6px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  input {
-    outline: none;
-    border: none;
-    width: 25px;
-    height: 100%;
-  }
-`

@@ -1,4 +1,5 @@
-import { Minus, Plus, Trash } from 'phosphor-react'
+import { Trash } from 'phosphor-react'
+import { Counter } from '../../../Home/components/Counter'
 import {
   Actions,
   ButtonRemover,
@@ -20,15 +21,7 @@ export function Cart() {
           <div>
             <p>Expresso Americano</p>
             <Actions>
-              <div>
-                <button>
-                  <Minus size={14} weight="bold" color="#8047F8" />
-                </button>
-                <input type="text" />
-                <button>
-                  <Plus size={14} weight="bold" color="#8047F8" />
-                </button>
-              </div>
+              <Counter />
               <ButtonRemover>
                 <Trash size={16} weight="regular" color="#8047F8" />
                 remover
@@ -43,15 +36,7 @@ export function Cart() {
           <div>
             <p>Expresso Americano</p>
             <Actions>
-              <div>
-                <button>
-                  <Minus size={14} weight="bold" color="#8047F8" />
-                </button>
-                <input type="text" />
-                <button>
-                  <Plus size={14} weight="bold" color="#8047F8" />
-                </button>
-              </div>
+              <Counter />
               <ButtonRemover>
                 <Trash size={16} weight="regular" color="#8047F8" />
                 remover

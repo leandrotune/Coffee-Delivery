@@ -1,13 +1,13 @@
 import { api } from '../../../../services/api'
-import { Minus, Plus, ShoppingCart } from 'phosphor-react'
+import { ShoppingCart } from 'phosphor-react'
 import {
   CoffeeCard,
   CoffeeListContainer,
   ContainerAddCard,
-  Count,
   TypeContainer,
 } from './styles'
 import { useState, useEffect } from 'react'
+import { Counter } from '../Counter'
 
 interface Coffees {
   id: number
@@ -48,8 +48,6 @@ export function CoffeeList() {
                 <img src={coffee.image.source} alt={coffee.image.alt} />
                 <TypeContainer>
                   <p>{coffee.type.tag1}</p>
-                  <p>{coffee.type.tag2}</p>
-                  <p>{coffee.type.tag3}</p>
                 </TypeContainer>
                 <strong>{coffee.title}</strong>
                 <span>{coffee.description}</span>
@@ -57,15 +55,7 @@ export function CoffeeList() {
                   <label>
                     <span>R$</span> {coffee.prince}
                   </label>
-                  <Count>
-                    <button>
-                      <Minus size={14} weight="bold" color="#8047F8" />
-                    </button>
-                    <input type="text" name="amount" />
-                    <button>
-                      <Plus size={14} weight="bold" color="#8047F8" />
-                    </button>
-                  </Count>
+                  <Counter />
                   <button type="submit">
                     <ShoppingCart size={22} weight="fill" color="#F3F2F2" />
                   </button>

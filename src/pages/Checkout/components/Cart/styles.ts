@@ -54,23 +54,6 @@ export const Actions = styled.div`
   flex-direction: row;
   padding: 0px;
   gap: 8px;
-
-  div {
-    width: 4.5rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-
-  button {
-    height: 2rem;
-  }
-
-  input {
-    width: 22px;
-    height: 2rem;
-  }
 `
 
 export const ButtonRemover = styled.button`
