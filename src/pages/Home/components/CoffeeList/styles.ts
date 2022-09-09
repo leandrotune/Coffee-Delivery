@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const CoffeeListContainer = styled.main`
   display: flex;
   flex-direction: column;
+  margin-bottom: 9.8rem;
 
   h2 {
     font-size: 2rem;
@@ -75,31 +76,42 @@ export const TypeContainer = styled.div`
     background: ${(props) => props.theme['yellow-100']};
   }
 `
-export const ContainerAddCard = styled.div`
+export const BuyCoffee = styled.form`
   margin-top: 2.063rem;
   width: 13rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0;
 
   label {
+    width: 4.188rem;
     font-family: 'Baloo 2', sans-serif;
     font-weight: 800;
     font-size: 1.5rem;
     line-height: 1.3;
+    color: ${(props) => props.theme['base-title']};
   }
 
-  span {
-    font-size: 0.875rem;
-    line-height: 1.3;
-    color: ${(props) => props.theme['base-text']};
-  }
+  button[type='submit'] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  /* button: {
     width: 2.375rem;
     height: 2.375rem;
-    border: none;
+    border: 0;
     border-radius: 6px;
     background: ${(props) => props.theme['purple-800']};
-  } */
+    cursor: pointer;
+
+    svg {
+      color: ${(props) => props.theme['base-card']};
+    }
+
+    &:hover {
+      background: ${(props) => props.theme['purple-400']};
+      transition: background-color 0.2s;
+    }
+  }
 `

@@ -164,7 +164,7 @@
       },
       "title": "Havaiano",
       "description": "Bebida adocicada preparada com café e leite de coco",
-      "price": "R$ 9,90"
+      "price": "9,90"
     },
     {
       "id": 13,
@@ -177,7 +177,7 @@
       },
       "title": "Árabe",
       "description": "Bebida preparada com grãos de café árabe e especiarias",
-      "price": "R$ 9,90"
+      "price": "9,90"
     },
     {
       "id": 14,

@@ -1,11 +1,15 @@
 import { Cart } from './components/Cart'
-import { DeliveryAddress } from './components/DeliveryAddress'
 import { CheckoutContainer } from './styles'
+import { PaymentSection } from './PaymentSection/index'
+import { CompleteYourLost } from './components/CompleteYourLost'
 
 export function Checkout() {
   return (
     <CheckoutContainer>
-      <DeliveryAddress />
+      <main>
+        <CompleteYourLost />
+        <PaymentSection />
+      </main>
       <Cart />
     </CheckoutContainer>
   )

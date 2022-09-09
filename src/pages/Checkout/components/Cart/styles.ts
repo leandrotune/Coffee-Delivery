@@ -1,13 +1,17 @@
 import styled from 'styled-components'
 
-export const HeaderCart = styled.header`
-  h3 {
-    font-family: 'Baloo 2', sans-serif;
-    font-size: 1.125rem;
-    font-weight: 700;
-    line-height: 1.3;
+export const CartContainer = styled.aside`
+  max-width: 40rem;
 
-    color: ${(props) => props.theme['base-subtitle']};
+  header {
+    h3 {
+      font-family: 'Baloo 2', sans-serif;
+      font-size: 1.125rem;
+      font-weight: 700;
+      line-height: 1.3;
+
+      color: ${(props) => props.theme['base-subtitle']};
+    }
   }
 `
 
@@ -133,6 +137,7 @@ export const FooterContainer = styled.footer`
 
     &:hover {
       background: ${(props) => props.theme['yellow-900']};
+      transition: background-color 0.2s;
     }
   }
 `

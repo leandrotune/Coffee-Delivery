@@ -42,10 +42,28 @@ export const Cart = styled.div`
   width: 2.375rem;
   height: 2.375rem;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 0.25rem;
   border-radius: 6px;
   background: ${(props) => props.theme['yellow-100']};
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    position: absolute;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    top: calc(3.25rem / 2);
+    right: calc(-1.25rem / 2);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: ${(props) => props.theme.white};
+    background: ${(props) => props.theme['yellow-900']};
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `

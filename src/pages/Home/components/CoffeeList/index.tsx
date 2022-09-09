@@ -3,7 +3,7 @@ import { ShoppingCart } from 'phosphor-react'
 import {
   CoffeeCard,
   CoffeeListContainer,
-  ContainerAddCard,
+  BuyCoffee,
   TypeContainer,
 } from './styles'
 import { useState, useEffect } from 'react'
@@ -22,7 +22,7 @@ interface Coffees {
   }
   title: string
   description: string
-  prince: string
+  price: string
 }
 
 export function CoffeeList() {
@@ -43,23 +43,23 @@ export function CoffeeList() {
       <form>
         <ul>
           {coffees.map((coffee) => {
+            const { id, image, type, title, description, price } = coffee
+
             return (
-              <CoffeeCard key={coffee.id}>
-                <img src={coffee.image.source} alt={coffee.image.alt} />
+              <CoffeeCard key={id}>
+                <img src={image.source} alt={image.alt} />
                 <TypeContainer>
-                  <p>{coffee.type.tag1}</p>
+                  <p>{type.tag1}</p>
                 </TypeContainer>
-                <strong>{coffee.title}</strong>
-                <span>{coffee.description}</span>
-                <ContainerAddCard>
-                  <label>
-                    <span>R$</span> {coffee.prince}
-                  </label>
+                <strong>{title}</strong>
+                <span>{description}</span>
+                <BuyCoffee>
+                  <label>{price}</label>
                   <Counter />
                   <button type="submit">
-                    <ShoppingCart size={22} weight="fill" color="#F3F2F2" />
+                    <ShoppingCart size={22} weight="fill" />
                   </button>
-                </ContainerAddCard>
+                </BuyCoffee>
               </CoffeeCard>
             )
           })}

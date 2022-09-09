@@ -21,6 +21,11 @@ export const GlobalStyle = createGlobalStyle`
     appearance: textfield;
   }
 
+  @media (max-width: 375px) {
+    html {
+      font-size: 87.5%;
+    }
+  }
 
   body {
     background: ${(props) => props.theme.background};  

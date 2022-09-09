@@ -19,7 +19,7 @@ export const CompleteYourLostContainer = styled.div`
 export const CardAddress = styled.section`
   margin-top: 0.938rem;
   width: 100%;
-  height: 23.25rem;
+  min-height: 23.25rem;
   border-radius: 6px;
   background: ${(props) => props.theme['base-card']};
 
@@ -63,6 +63,11 @@ export const FormAddress = styled.form`
   div {
     display: flex;
     gap: 0.75rem;
+
+    @media (max-width: 375px) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 `
 
@@ -83,8 +88,11 @@ export const BaseInput = styled.input`
 `
 
 export const InputCep = styled(BaseInput)`
-  max-width: 12.5rem;
-  width: 100%;
+  width: 12.5rem;
+
+  @media (max-width: 375px) {
+    width: 100%;
+  }
 `
 
 export const InputRoad = styled(BaseInput)`
@@ -93,7 +101,11 @@ export const InputRoad = styled(BaseInput)`
 `
 
 export const InputResidentialNumber = styled(BaseInput)`
-  max-width: 12.5rem;
+  width: 12.5rem;
+
+  @media (max-width: 375px) {
+    width: 100%;
+  }
 `
 
 export const InputComplement = styled(BaseInput)`
@@ -101,15 +113,27 @@ export const InputComplement = styled(BaseInput)`
 `
 
 export const InputDistrict = styled(BaseInput)`
-  max-width: 12.5rem;
+  width: 12.5rem;
+
+  @media (max-width: 375px) {
+    width: 100%;
+  }
 `
 
 export const InputCity = styled(BaseInput)`
   flex: 1;
+
+  @media (max-width: 375px) {
+    width: 100%;
+  }
 `
 
 export const InputUF = styled(BaseInput)`
   width: 3.75rem;
+
+  @media (max-width: 375px) {
+    width: 100%;
+  }
 `
 
 // export const FormContainer = styled.form`

@@ -8,10 +8,7 @@ import {
   IntroContainer,
   IntroContent,
   QualitysContainer,
-  ShoppingCartContainer,
-  PackegeContainer,
-  CoffeContainer,
-  TimerContainer,
+  IconContainer,
 } from './styles'
 
 export function CoffeIntroduction() {
@@ -28,33 +25,33 @@ export function CoffeIntroduction() {
           </div>
           <CoffeQuality>
             <QualitysContainer>
-              <ShoppingCartContainer>
-                <ShoppingCart size={13} weight="fill" color="#FAFAFA" />
-              </ShoppingCartContainer>
+              <IconContainer variant="Yellow Dark">
+                <ShoppingCart size={13} weight="fill" />
+              </IconContainer>
 
               <span>Compra simples e segura</span>
             </QualitysContainer>
 
             <QualitysContainer>
-              <PackegeContainer>
-                <Package size={13} weight="fill" color="#FAFAFA" />
-              </PackegeContainer>
+              <IconContainer variant="Gray">
+                <Package size={13} weight="fill" />
+              </IconContainer>
 
               <span>Embalagem mantém o café intacto</span>
             </QualitysContainer>
 
             <QualitysContainer>
-              <TimerContainer>
-                <Timer size={13} weight="fill" color="#FAFAFA" />
-              </TimerContainer>
+              <IconContainer variant="Yellow">
+                <Timer size={13} weight="fill" />
+              </IconContainer>
 
               <span>Entrega rápida e rastreada</span>
             </QualitysContainer>
 
             <QualitysContainer>
-              <CoffeContainer>
-                <Coffee weight="fill" size={13} color="#FAFAFA" />
-              </CoffeContainer>
+              <IconContainer variant="Purple">
+                <Coffee weight="fill" size={13} />
+              </IconContainer>
 
               <span>O café chega fresquinho até você</span>
             </QualitysContainer>

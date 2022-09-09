@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 // import backgroundIntro from '../../../assets/backgroundIntro.png'
 
 export const IntroCoffe = styled.div`
@@ -52,28 +52,44 @@ export const QualitysContainer = styled.div`
   gap: 0.75rem;
 `
 
-export const BaseForItemQuality = styled.div`
+interface IconContainerProps {
+  variant: 'Yellow Dark' | 'Yellow' | 'Gray' | 'Purple'
+}
+
+export const IconContainer = styled.div<IconContainerProps>`
   width: 2rem;
   height: 2rem;
   border-radius: 999%;
-  background: ${(props) => props.theme['purple-800']};
 
   display: flex;
   justify-content: center;
   align-items: center;
-`
-export const ShoppingCartContainer = styled(BaseForItemQuality)`
-  background-color: ${(props) => props.theme['yellow-900']};
-`
 
-export const PackegeContainer = styled(BaseForItemQuality)`
-  background-color: ${(props) => props.theme['base-text']};
-`
+  svg {
+    color: ${(props) => props.theme.background};
+  }
 
-export const TimerContainer = styled(BaseForItemQuality)`
-  background-color: ${(props) => props.theme['yellow-400']};
-`
+  ${(props) =>
+    props.variant === 'Yellow Dark' &&
+    css`
+      background: ${(props) => props.theme['yellow-900']};
+    `}
 
-export const CoffeContainer = styled(BaseForItemQuality)`
-  background-color: ${(props) => props.theme['purple-400']};
+  ${(props) =>
+    props.variant === 'Yellow' &&
+    css`
+      background: ${(props) => props.theme['yellow-400']};
+    `}
+
+  ${(props) =>
+    props.variant === 'Gray' &&
+    css`
+      background: ${(props) => props.theme['base-text']};
+    `}
+
+  ${(props) =>
+    props.variant === 'Purple' &&
+    css`
+      background: ${(props) => props.theme['purple-400']};
+    `}
 `

@@ -17,6 +17,7 @@ export function Header() {
           <NavLink to={'/checkout'} title="checkout">
             <Cart>
               <ShoppingCart color="#C47F17" size={22} weight="fill" />
+              <span>3</span>
             </Cart>
           </NavLink>
         </div>
